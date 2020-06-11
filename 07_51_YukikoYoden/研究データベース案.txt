@@ -1,0 +1,103 @@
+音楽研究サイト用案：MR.db
+
+１.ログイン画面を作る
+<ログイン部分>
+1.Id int(12) auto increment
+2.u_name varchar(128) utf8_general_ci
+3.u_mail varchar(64) utf8
+4.u_pw varchar(64) utf8
+5.life_flg int(1)
+6.indate datetime
+
+
+<データベース部分>
+Kernデータの保管とhumdrumtoolへのリンク
+1.Id
+2.ジャンル genre varchar(128) utf8_general_ci
+3.曲集名 s_title varchar(128) utf8_general_ci
+4.曲名 o_titel varchar(128) utf8_general_ci
+5.作曲者名 composer varchar(128) utf8_general_ci
+ .編曲者名 (null可) arranger varchar(128) utf8_general_ci
+ .作詞者名 (null可) l_writer varchar(128) utf8_general_ci
+ .楽譜画像名 (null可) img_name
+(.xmlデータ/また次回追記するかも)
+6.kernデータ kern varchar(600) utf8_general_ci
+7.登録者データ contributor(128) utf8_general_ci
+8.indate datetime
+
+*自分が登録した総数の表示(作業進捗度や貢献度)
+*
+<index.php>
+~モチベーションパート~
+前回作業時間表示
+作業完了バー
+など
+
+~メイン~
+・kern
+・
+
+
+!!!COM: Stravinsky, Igor Fyodorovich
+!!!CDT: 1882/6/17/-1971/4/6
+!!!ODT: 1911//-1913//; 1947//
+!!!OPT@@RU: Весна священная
+!!!OPT@FR: Le sacre du printemps
+!!!OPT@EN: Rite of Spring
+!!!OTL@FR: Les augures printaniers
+!!!PUB: Boosey & Hawkes
+!!!YEC: 1945 Boosey & Hawkes
+!!!AGN: ballet
+!!!AST: neo-classical
+!!!AMT: irregular
+!!!AIN: clars corno fagot flt oboe
+
+Reference codes that begin with the letter C pertain to the composer. 
+The COM code identifies the composer (surname first followed by given names).
+The CDT code identifies the composer’s birth and death dates. 
+A special format is used in defining such dates, and so there are accurate ways to
+represent uncertainty, approximation, ranges of dates, and alternative dates. 
+The Humdrum Reference Manual describes date formats in great detail.
+
+Reference codes that begin with the letter O pertain to the work or opus. 
+The OTL code identifies the title of the encoded material — in this case the 
+*Les augures printaniers*. 
+The OPT code identifies the parent work from which the encoded music belongs. 
+The ODE code identifies the name of a person or organization to which the work was dedicated. 
+All three of these records OTL, OPT and ODE are encoded using the original language.
+
+Language designations are explicitly indicated by following a reference code 
+with one or two “at” signs @ followed by a two- or three-letter language code. 
+The OPT@EN code is used to provide an English translation. 
+In this case, the Russian title ( Весна священная , transliterated as Vesna svyashchennaya) is translated as Rite of Spring. 
+The double “at” sign (@@) is used to designate the original, primary, or preferred language.
+
+Reference codes beginning with P pertain to publishing and imprint information. 
+(Codes beginning with S can be used to identify manuscript sources, 
+library or archive locations, and other source-related data.)
+
+Codes beginning with Y identify copyright information. 
+Humdrum defines separate codes for publisher of the electronic edition, 
+publisher of the original source document, date of copyright, 
+date of data release, country of copyright, copyright message, original copyright owner, 
+original year of publication, and other information. 
+The YEC reference record shown in Example 2.6 simply encodes the date and copyright owner of the electronic document.
+
+Codes that begin with A identify analytic information concerning the document. 
+The code AMT provides a metric classification. 
+Meters may be classified using combinations of the following keywords: simple, compound, duple, triple, quadruple, irregular. 
+The AGN code is used to provide a free-form text that helps to identify the genre of the work. 
+In this case the genre is identified as ballet. 
+Other suitable characterizations may include opera, string quartet, concerto, barbershop quartet, folksong, and so on. 
+The AST code can be used to identify the style or period of work. 
+Once again, this is a free-form text record. Suitable keywords might include 
+terms such as baroque, bebop, bossa nova, Ecole Notre Dame, minimalist, 
+high-life, hip-hop, reggae, etc. 
+Such analytic information is obviously interpretive and often open to disagreement.
+Nevertheless, explicit analytic information often proves useful in electronic documents.
+
+An especially useful analytic reference record is the AIN record for encoding instrumentation. This reference record follows a strict syntax. Each instrument has an official Humdrum abbrevation. Appendix II identifies a number of the more common instrument codes. Instrumentation reference records always specify the instrumentation in alphabetical order by instrument abbrevation separated by a single space. For example, the instrumentation for a woodwind quintet is given as:
+
+!!!AIN: clars corno fagot flt oboe
+In our discussion here we have only identified some of the more common types of reference records. A complete description of reference records is given in Appendix II.
+

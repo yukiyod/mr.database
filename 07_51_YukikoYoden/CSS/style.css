@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Signika);
+
+header {
+  height: 20px;
+}
+
+body {
+  background: beige;
+}
+
+.mbox_title {
+  margin: 0;
+  padding: 0.5em;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Signika", sans-serif;
+}
+
+.title {
+  display: flex;
+  margin: 0 auto;
+  width: 600px;
+  height: auto;
+}
+
+.title_ex {
+  font-family: "Signika", sans-serif;
+}
+
+.maintitle {
+  font-size: 5em;
+  font: bold 7.5vw/1.6 "Signika", sans-serif;
+}
+
+.logo {
+  margin-top: 20px;
+}
+
+.forms {
+  display: flex;
+  justify-content: space-evenly;
+}
+.mem_box {
+  background-color: cornflowerblue;
+  width: 300px;
+  height: 200px;
+  border-radius: 2em;
+}
+
+.guest_box {
+  background-color: rgb(116, 227, 188);
+  width: 300px;
+  height: 200px;
+  border-radius: 2em;
+}
+
+.gtcreat {
+  display: flex;
+  font-size: 13px;
+  margin-left: 30px;
+  font-family: "Signika", sans-serif;
+}
+
+.gtc2 {
+  color: royalblue;
+}
+
+.textbox {
+  position: relative;
+  margin-left: 30px;
+  display: block;
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #636262;
+  outline: none;
+}
+
+.login_btn {
+  border-radius: 0.5em;
+  margin-left: 30px;
+  padding: 3px;
+  cursor: pointer;
+  background: white;
+}
+
+.gbox_title {
+  text-align: center;
+  margin: 0 aut;
+}
+
+/**kern.php**/
+.h_kern {
+  display: flex;
+}
+
+.logo_title {
+  font-family: "Signika", sans-serif;
+  margin-top: 0;
+}
+
+.kern_r_form {
+  margin-top: 40px;
+}
+
+.kern_nav_list {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  height: 20px;
+  justify-content: space-between;
+}
+
+/*for select.php*/
+.getkern_ex {
+  margin-top: 50px;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+}
+
+table th {
+  text-align: center;
+  color: white;
+  background: linear-gradient(#ffb7fd, #df6d8c);
+  border-left: 1px solid #ff82e6;
+  border-top: 1px solid #ff82e6;
+  border-bottom: 2px solid #efd8f4;
+  box-shadow: 0px 1px 1px rgba(222, 80, 153, 0.653) inset;
+  padding: 5px 0;
+}
+
+table td {
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+}
+
+tr:nth-child(even) {
+  background: #d9d9d9;
+}
+
+.select_list {
+  padding: 0;
+}
+
+/*get_kern.php*/
+.getkerndata {
+  margin-top: 50px;
+}
