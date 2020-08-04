@@ -1,5 +1,0 @@
-(id)(u_name)(u_mail)(u_pq)(life_flg)(innate)
-
-1, (1)(YukikoYoden)(test@test)(test)
-2. (2)(石田佳佑)(ishida@keisuke)(ishida)
-3. (3)(松本隼人)(matsumoto@hayato)(matsumoto)
